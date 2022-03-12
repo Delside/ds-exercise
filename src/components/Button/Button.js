@@ -14,6 +14,8 @@ const handleSize = (size) => {
 };
 
 const Button = styled.button`
+  outline: none;
+  box-sizing: border-box;
   background-color: #0068b5;
   width: auto;
   display: inline-block;
@@ -33,11 +35,9 @@ const Button = styled.button`
     background-color: #00285a;
   }
 
-  &:focus {
-    border: 1px #0068b5;
-    box-sizing: border-box;
+  &:focus:not(:hover) {
+    box-shadow: inset 0 0 0 2pt #0068b5, inset 0 0 0 3pt #fff;
   }
-
   &:disabled {
     background-color: #e9eaeb;
     color: #cdced1;
