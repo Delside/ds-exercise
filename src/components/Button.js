@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import theme from "./theme";
 
+// Could be potentially refactored
 const handleSize = (size) => {
   switch (size) {
     case "40":
@@ -12,14 +13,13 @@ const handleSize = (size) => {
     default:
       return theme.height40;
   }
-}; // Could be potentially refactored
+};
 
 const Button = styled.button`
   outline: none;
   box-sizing: border-box;
   width: auto;
   display: inline-block;
-  line-height: 1.5;
   border: 0;
   margin: 1pt;
 
