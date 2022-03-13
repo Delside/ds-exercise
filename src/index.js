@@ -4,7 +4,14 @@ import Button from "./components/Button";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div>
+    <div
+      style={{
+        marginTop: "30vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Button size="40" onClick={() => alert("Created")}>
         Create new
       </Button>
@@ -15,7 +22,16 @@ ReactDOM.render(
         Create new
       </Button>
     </div>
-    <div>
+    <div
+      style={{
+        marginBottom: "30vh",
+        marginTop: "32pt",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {" "}
       <Button size="40" disabled>
         Create new
       </Button>
