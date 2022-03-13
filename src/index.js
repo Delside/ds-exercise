@@ -31,7 +31,6 @@ ReactDOM.render(
         alignItems: "center",
       }}
     >
-      {" "}
       <Button size="large" disabled>
         Create new
       </Button>

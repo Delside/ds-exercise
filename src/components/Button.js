@@ -2,7 +2,9 @@ import styled from "styled-components";
 import { css } from "styled-components";
 import theme from "./theme";
 
-const Button = styled.button.attrs(({ size }) => ({ size: size || "small" }))`
+const Button = styled.button.attrs(({ size }) => ({
+  size: theme.btnSize[size] || theme.btnSize["large"],
+}))`
   outline: none;
   border: 0;
   margin: 1pt;
@@ -11,7 +13,7 @@ const Button = styled.button.attrs(({ size }) => ({ size: size || "small" }))`
   font-family: ${theme.fontFamily};
   color: ${theme.fontColor};
 
-  ${({ size }) => css(theme.btnSize[size])};
+  ${({ size }) => css(size)};
 
   &:hover {
     background-color: ${theme.classicBlue.shade1};
