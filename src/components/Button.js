@@ -1,25 +1,9 @@
 import styled from "styled-components";
+import { css } from "styled-components";
 import theme from "./theme";
 
-// Could be potentially refactored
-const handleSize = (size) => {
-  switch (size) {
-    case "40":
-      return theme.height40;
-    case "32":
-      return theme.height32;
-    case "24":
-      return theme.height24;
-    default:
-      return theme.height40;
-  }
-};
-
-const Button = styled.button`
+const Button = styled.button.attrs(({ size }) => ({ size: size || "small" }))`
   outline: none;
-  box-sizing: border-box;
-  width: auto;
-  display: inline-block;
   border: 0;
   margin: 1pt;
 
@@ -27,7 +11,7 @@ const Button = styled.button`
   font-family: ${theme.fontFamily};
   color: ${theme.fontColor};
 
-  ${({ size }) => handleSize(size)};
+  ${({ size }) => css(theme.btnSize[size])};
 
   &:hover {
     background-color: ${theme.classicBlue.shade1};

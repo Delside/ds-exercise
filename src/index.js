@@ -12,13 +12,13 @@ ReactDOM.render(
         alignItems: "center",
       }}
     >
-      <Button size="40" onClick={() => alert("Created")}>
+      <Button size="large" onClick={() => alert("Created")}>
         Create new
       </Button>
-      <Button size="32" onClick={() => alert("Created")}>
+      <Button size="medium" onClick={() => alert("Created")}>
         Create new
       </Button>
-      <Button size="24" onClick={() => alert("Created")}>
+      <Button size="small" onClick={() => alert("Created")}>
         Create new
       </Button>
     </div>
@@ -32,13 +32,13 @@ ReactDOM.render(
       }}
     >
       {" "}
-      <Button size="40" disabled>
+      <Button size="large" disabled>
         Create new
       </Button>
-      <Button size="32" disabled>
+      <Button size="medium" disabled>
         Create new
       </Button>
-      <Button size="24" disabled>
+      <Button size="small" disabled>
         Create new
       </Button>
     </div>
