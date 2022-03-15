@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# ds-exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This PoC was created to show how we can create reusable UI component in React with CSS variables located in seperate file.
 
-## Available Scripts
+## Used technologies
 
-In the project directory, you can run:
+- React 17.0.2
+- styled-components 5.3.3
+- Languages: JavaScript, HTML, CSS
 
-### `npm start`
+## How to run ds-exercise
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+After downloading, execute npm install in terminal:
+```
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Then run by executing npm start:
+```
+npm start
+```
+Open http://localhost:3000 to view it in the browser.
 
-### `npm test`
+## Folder Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After downloading and running project. The folder structure should look like this:
+```
+ds-exercise/
+  node_modules/
+  public/
+    index.html
+  src/
+    components/
+      Button.js
+      theme.js
+    index.js
+  .gitattibutes
+  .gitignore
+  package-lock.json
+  package.json
+  README.md
+```
 
-### `npm run build`
+## Important files
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `index.html`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+index.html is necessary. It is the page template.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `index.js`
 
-### `npm run eject`
+JavaScript entry point. PoC base with implemented **Button** component with several variants. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+⚠️ All additional code, containing onClick events and div-s with hardcoded CSS style were made to enhance UX and show that the PoC is working.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Button.js`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Button.js is main component, made with styled-components library. Containing component style made with CSS-in-JS technique. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+All global variables, containing colors, font family, sizes and other is imported from theme.js object. For button sizes differentiation I used ```css``` and ```attrs``` methods.
 
-## Learn More
+### `theme.js`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+theme.js is component containing global variables used to style styled-components with CSS-in-JS techique. With object structure, CSS properties could be easily editable and reusable in local styles implemented in next styled components.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Why styled-components?
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I used styled-components for a couple of reasons:
+- styled-components allow to make truly **reusable and flexible components**, with CSS-in-JS and dynamic styling it is much easier to create many components without code duplication and with additional props
+- styled-components provides better performance, as browser don't need to load styles if component is not rendered
+- styled-components works well with React Native
+- styled-components always create unique class names to avoid bugs
