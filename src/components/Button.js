@@ -24,7 +24,7 @@ const Button = styled.button.attrs(({ size }) => ({
   }
 
   &:focus:not(:hover) {
-    ${theme.focusStyle.boxShadow};
+    ${theme.focusStyle};
   }
   &:disabled {
     ${theme.disabledStyle};

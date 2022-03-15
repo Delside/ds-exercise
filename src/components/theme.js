@@ -1,6 +1,6 @@
 const theme = {
   focusStyle: {
-    boxShadow: "inset 0 0 0 2pt, inset 0 0 0 3pt #fff",
+    boxShadow: "inset 0 0 0 2pt #0068b5,inset 0 0 0 3pt #fff",
   },
   disabledStyle: {
     backgroundColor: "#e9eaeb",
@@ -9,7 +9,7 @@ const theme = {
   },
 
   fontFamily:
-    '"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif',
+    '"Trebuchet MS","Lucida Sans Unicode","Lucida Grande","Lucida Sans",Arial,sans-serif',
   fontColor: "#fff",
 
   classicBlue: {
