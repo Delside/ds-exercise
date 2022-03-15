@@ -3,7 +3,7 @@ import { css } from "styled-components";
 import theme from "./theme";
 
 const Button = styled.button.attrs(({ size }) => ({
-  size: theme.btnSize[size] || theme.btnSize["large"],
+  size: theme.btnSize[size] || theme.btnSize.large,
 }))`
   outline: none;
   border: 0;
@@ -24,10 +24,10 @@ const Button = styled.button.attrs(({ size }) => ({
   }
 
   &:focus:not(:hover) {
-    ${theme.focusStyle};
+    ${theme.focusStyle.boxShadow};
   }
   &:disabled {
-    ${theme.disabledStyle}
+    ${theme.disabledStyle};
   }
 `;
 
