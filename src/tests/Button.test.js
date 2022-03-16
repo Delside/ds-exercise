@@ -7,7 +7,7 @@ import theme from "../components/theme.js";
 
 afterEach(cleanup);
 
-describe("Button styled-components styling", () => {
+describe("Button styled-components", () => {
   it("Render button with defined local component styling", () => {
     const tree = renderer.create(<Button>Create new</Button>).toJSON();
 
@@ -15,18 +15,14 @@ describe("Button styled-components styling", () => {
     expect(tree).toHaveStyleRule("border", "0");
     expect(tree).toHaveStyleRule("margin", "1pt");
   });
-});
 
-describe("Button styled-components font properties", () => {
   it("Render button with defined global font color and family", () => {
     const tree = renderer.create(<Button>Create new</Button>).toJSON();
 
     expect(tree).toHaveStyleRule("color", theme.fontColor);
     expect(tree).toHaveStyleRule("font-family", theme.fontFamily);
   });
-});
 
-describe("Button appropriate size", () => {
   it("Render large button if size variant is inappropriate", () => {
     const tree = renderer
       .create(<Button size="definitelynotcorrectvalue ;)">Create new</Button>)
@@ -34,9 +30,7 @@ describe("Button appropriate size", () => {
 
     expect(tree).toHaveStyleRule("height", theme.btnSize.large.height);
   });
-});
 
-describe("Button without size property", () => {
   it("Render large button if size variant is not declared", () => {
     const tree = renderer.create(<Button>Create new</Button>).toJSON();
 
@@ -45,10 +39,8 @@ describe("Button without size property", () => {
     expect(tree).toHaveStyleRule("font-size", theme.btnSize.large.fontSize);
     expect(tree).toHaveStyleRule("padding", theme.btnSize.large.padding);
   });
-});
 
-describe("Button small size", () => {
-  it("Render large button if size variant is small", () => {
+  it("Render small button if size variant is small", () => {
     const tree = renderer
       .create(<Button size="small">Create new</Button>)
       .toJSON();
@@ -58,10 +50,8 @@ describe("Button small size", () => {
     expect(tree).toHaveStyleRule("font-size", theme.btnSize.small.fontSize);
     expect(tree).toHaveStyleRule("padding", theme.btnSize.small.padding);
   });
-});
 
-describe("Button medium size", () => {
-  it("Render large button if size variant is medium", () => {
+  it("Render medium button if size variant is medium", () => {
     const tree = renderer
       .create(<Button size="medium">Create new</Button>)
       .toJSON();
@@ -71,19 +61,18 @@ describe("Button medium size", () => {
     expect(tree).toHaveStyleRule("font-size", theme.btnSize.medium.fontSize);
     expect(tree).toHaveStyleRule("padding", theme.btnSize.medium.padding);
   });
-});
 
-describe("Button large size", () => {
-  it("Render large button if size variant is medium", () => {
+  it("Render large button if size variant is large", () => {
     const tree = renderer
       .create(<Button size="large">Create new</Button>)
       .toJSON();
 
     expect(tree).toHaveStyleRule("height", theme.btnSize.large.height);
+    expect(tree).toHaveStyleRule("min-width", theme.btnSize.large.minWidth);
+    expect(tree).toHaveStyleRule("font-size", theme.btnSize.large.fontSize);
+    expect(tree).toHaveStyleRule("padding", theme.btnSize.large.padding);
   });
-});
 
-describe("Button disabled style", () => {
   it("Render disabled button with appropriate style", () => {
     const tree = renderer.create(<Button disabled>Create new</Button>).toJSON();
 
@@ -105,9 +94,7 @@ describe("Button disabled style", () => {
       }
     );
   });
-});
 
-describe("Button hover style", () => {
   it("Render button with appropriate hover pseudoclass style", () => {
     const tree = renderer.create(<Button>Create new</Button>).toJSON();
 
@@ -115,9 +102,7 @@ describe("Button hover style", () => {
       modifier: "&:hover",
     });
   });
-});
 
-describe("Button focus style", () => {
   it("Render button with appropriate focus pseudoclass style", () => {
     const tree = renderer.create(<Button>Create new</Button>).toJSON();
 
