@@ -79,6 +79,6 @@ npm test
 
 I used styled-components for a couple of reasons:
 - styled-components allow to make truly **reusable and flexible components**, with CSS-in-JS and dynamic styling it is much easier to create many components without code duplication and with additional props
-- styled-components provides better performance, as browser don't need to load styles if component is not rendered
+- styled-components provides better performance, as browser doesn't need to load styles if component is not rendered
 - styled-components works well with React Native
-- styled-components always create unique class names to avoid bugs
+- styled-components always create unique class names to avoid class name bugs
