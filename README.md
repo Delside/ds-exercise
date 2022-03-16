@@ -6,6 +6,7 @@ This PoC was created to show how we can create reusable UI component in React wi
 
 - React 17.0.2
 - styled-components 5.3.3
+- Jest 27.5.1
 - Languages: JavaScript, HTML, CSS
 
 ## How to run ds-exercise
@@ -33,6 +34,8 @@ ds-exercise/
     components/
       Button.js
       theme.js
+    tests/
+      Button.test.js
     index.js
   .gitattibutes
   .gitignore
@@ -61,7 +64,11 @@ All global variables, containing colors, font family, sizes and other is importe
 
 ### `theme.js`
 
-theme.js is component containing global variables used to style styled-components with CSS-in-JS techique. With object structure, CSS properties could be easily editable and reusable in local styles implemented in next styled components.
+theme.js is component containing global variables used to style styled-components with CSS-in-JS techique. It is used in Button.js component and Button.test.js file. With object structure, CSS properties could be easily editable and reusable in local styles implemented in next styled components.
+
+### `Button.test.js`
+
+Button.test.js is a file containing 10 unit tests. Tests check rendered Button component styling properties.
 
 ## Why styled-components?
 
