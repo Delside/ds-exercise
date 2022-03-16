@@ -70,6 +70,11 @@ theme.js is component containing global variables used to style styled-component
 
 Button.test.js is a file containing 10 unit tests. Tests check rendered Button component styling properties.
 
+You can run tests using script in terminal:
+```
+npm test
+```
+
 ## Why styled-components?
 
 I used styled-components for a couple of reasons:
